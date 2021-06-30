@@ -18,16 +18,94 @@
 若是通殺，則顯示大寫英文字母 WIN ， 若是無意義 ，則 顯示大寫英文字母 R ，若可計算點數，則顯示最後點數 。 輸出結果前後均不需留空格 。
 */
 
-#include<iostream>
+#include <iostream>
 #include <string>
 #include <stdio.h>
 #include <memory>
 
 using namespace std;
-int main(){
+int main()
+{
 
-    int num[4];
-    memset(num,0,sizeof(num));
+    int n1, n2, n3, n4;
+    cin >> n1;
+    cin >> n2;
+    cin >> n3;
+    cin >> n4;
+
+    if (n1 == n2 &&n1==n3 && n1 == n4 &&  n2 == n3 && n3 == n4)
+    {
+        cout << "WIN" << endl;
+    }
+
+    else if (n1 != n2 && n1 != n4 && n1!=n3 && n2 != n3 && n3 != n4)
+    {
+        cout << "R" << endl;
+    }
+
+    else if (n1 == n2 && n2 == n3)
+    {
+        cout << "R" << endl;
+    }
+    else if (n2 == n3 && n3 == n4)
+    {
+        cout << "R" << endl;
+    }
+    else if (n1 == n3 && n3 == n4)
+    {
+        cout << "R" << endl;
+    }
+    else if (n1 == n4 && n4 == n2)
+    {
+        cout << "R" << endl;
+    }
 
 
+    else if (n1 == n2 && n1 + n2 < n3 + n4)
+    {
+        cout << n3 + n4 << endl;
+    }
+    else if (n1 == n2 && n1 + n2 > n3 + n4)
+    {
+        cout << n1 + n2 << endl;
+    }
+
+
+    else if(n1 == n3 && n1+n3 > n2+n4){
+        cout << n1+n3 <<endl;
+    }
+    else if(n1 == n3 && n1+n3 < n2+n4){
+        cout << n2+n4 <<endl;
+    }
+
+
+    else if (n1 == n4 && n1 + n4 > n2 + n3)
+    {
+        cout << n1 + n4 << endl;
+    }
+    else if (n1 == n4 && n1 + n4 < n2 + n3)
+    {
+        cout << n2 + n3 << endl;
+    }
+
+
+    else if (n2 == n3 && n1 + n4 > n2 + n3)
+    {
+        cout << n1 + n4 << endl;
+    }
+    else if (n2 == n3 && n1 + n4 < n2 + n3)
+    {
+        cout << n2 + n3 << endl;
+    }
+
+    else if (n3 == n4 && n1 + n2 > n3 + n4)
+    {
+        cout << n1 + n2 << endl;
+    }
+    else if (n3 == n4 && n1 + n2 < n3 + n4)
+    {
+        cout << n3 + n4 << endl;
+    }
+
+    
 }

@@ -11,30 +11,33 @@
 */
 
 #include <iostream>
+#include <vector>
 using namespace std;
 int main()
 {
 
-    int n, a[100] = {0};
-    while (cin >> n)
+    long long int N;
+
+    while (cin >> N)
     {
-        for (int i = 0; i <= n;i++ )
+        int count = 0;
+
+        int j = 0;
+        for (int i = 1; i <= N; i++)
         {
-            if (n % 3 == 0)
+            if (i % 3 == 0)
             {
-                a[i] = n;
+                count += i;
+                j++;
             }
-            n--;
         }
-
-        int total = 0 ;
-        for (int i = 0; i <=n;i++ )
-        {
-            total = a[i]+a[i+1];
-        }
-     cout << total <<endl;
-
-
+        cout << count << endl; 
+        //  int sum = 0;
+        // for (int i = 0; i <= N; i++)
+        // {
+        //     sum += count[i];
+        // }
+        // cout << sum << endl;
     }
 
     return 0;
